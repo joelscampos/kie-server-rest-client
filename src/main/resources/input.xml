@@ -1,0 +1,8 @@
+<batch-execution lookup="defaultKieSession">
+  <insert out-identifier="output" return-object="true" entry-point="DEFAULT">
+    <com.redhat.bpms.examples.Account>
+      <balance>50</balance>
+    </com.redhat.bpms.examples.Account>
+  </insert>
+  <fire-all-rules/>
+</batch-execution>
