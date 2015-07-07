@@ -7,10 +7,14 @@ This example is intended to provide a base code to implement a client connection
  
 The remote server has to be set up and running before running this example.
 
-# 1. System Requirements
+System Requirements
+-------------------
+
  * Maven
 
-# 2. Running the example
+Running the example
+-------------------
+
 	mvn test
 
 Note that the pom.xml has parameters for URL, user and password.
