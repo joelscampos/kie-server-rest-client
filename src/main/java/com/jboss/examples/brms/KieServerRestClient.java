@@ -24,13 +24,14 @@ public class KieServerRestClient {
 		System.out
 				.println(runRequest(
 						args[0],
+						args[1],
 						//"http://localhost:8080/kie-server/services/rest/server/containers/container1",
 						new MediaType("application", "xml"),
-						args[1],
-						args[2]));
+						args[2],
+						args[3]));
 	}
 
-	private static String runRequest(String url, MediaType mediaType, String username, String password) {
+	private static String runRequest(String hostname, String url, MediaType mediaType, String username, String password) {
 		String result = null;
 
 		System.out.println("===============================================");
@@ -41,7 +42,7 @@ public class KieServerRestClient {
 
 			DefaultHttpClient client = new DefaultHttpClient();
 			client.getCredentialsProvider().setCredentials(
-					new AuthScope(new HttpHost("localhost")),
+					new AuthScope(new HttpHost(hostname)),
 					new UsernamePasswordCredentials(username, password));
 			ApacheHttpClient4Executor executer = new ApacheHttpClient4Executor(
 					client);

@@ -101,6 +101,7 @@
 				<configuration>
 					<mainClass>com.jboss.examples.brms.KieServerRestClient</mainClass>
 					<arguments>
+						<argument>localhost</argument>
 						<argument>http://localhost:8080/kie-server/services/rest/server/containers/container1</argument>
 						<argument>brmsAdmin</argument>
 						<argument>redhat123.</argument>
